@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController{
+    //creates a Reachblity object.
+    Reachability *internetReachable;
+}
+
+
 
 @end

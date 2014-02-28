@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		363E606C18BD1EF500C60911 /* tabs2014.png in Resources */ = {isa = PBXBuildFile; fileRef = 363E606B18BD1EF500C60911 /* tabs2014.png */; };
+		363E606E18BD238400C60911 /* facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 363E606D18BD238400C60911 /* facebook.jpg */; };
+		363E607018BD260000C60911 /* wellnesslogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 363E606F18BD260000C60911 /* wellnesslogo.png */; };
+		363E607418BD266600C60911 /* women logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 363E607318BD266600C60911 /* women logo.png */; };
+		363E607718BD9AE000C60911 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 363E607618BD9AE000C60911 /* Reachability.m */; };
+		363E607C18BDA50300C60911 /* betaMobileApp.js in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CE018886481009AC9E5 /* betaMobileApp.js */; };
+		363E607D18BDA50300C60911 /* betaMobileAppCampusData.js in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CE21888648E009AC9E5 /* betaMobileAppCampusData.js */; };
+		363E608018BDA9D800C60911 /* betaMobileApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CDE18886417009AC9E5 /* betaMobileApp.html */; };
+		363E608118BDA9D800C60911 /* betaMobileAppHousingData.js in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CE418886498009AC9E5 /* betaMobileAppHousingData.js */; };
+		363E608218BDA9D800C60911 /* betaMobileAppMenu.js in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CE8188864AF009AC9E5 /* betaMobileAppMenu.js */; };
+		363E608318BDA9D800C60911 /* betaMobileApp.css in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CE6188864A5009AC9E5 /* betaMobileApp.css */; };
 		367D2CAA18885E57009AC9E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367D2CA918885E57009AC9E5 /* Foundation.framework */; };
 		367D2CAC18885E57009AC9E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367D2CAB18885E57009AC9E5 /* CoreGraphics.framework */; };
 		367D2CAE18885E57009AC9E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367D2CAD18885E57009AC9E5 /* UIKit.framework */; };
@@ -21,6 +32,7 @@
 		367D2CCB18885E57009AC9E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367D2CAD18885E57009AC9E5 /* UIKit.framework */; };
 		367D2CD318885E57009AC9E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CD118885E57009AC9E5 /* InfoPlist.strings */; };
 		367D2CD518885E57009AC9E5 /* WalkingDistancesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2CD418885E57009AC9E5 /* WalkingDistancesTests.m */; };
+		36D146AD18AC31FC00E266F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D146AC18AC31FC00E266F6 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		363E606B18BD1EF500C60911 /* tabs2014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabs2014.png; sourceTree = "<group>"; };
+		363E606D18BD238400C60911 /* facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook.jpg; sourceTree = "<group>"; };
+		363E606F18BD260000C60911 /* wellnesslogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wellnesslogo.png; sourceTree = "<group>"; };
+		363E607318BD266600C60911 /* women logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "women logo.png"; sourceTree = "<group>"; };
+		363E607518BD9AE000C60911 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Reachability.h; sourceTree = "<group>"; };
+		363E607618BD9AE000C60911 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../Reachability.m; sourceTree = "<group>"; };
 		367D2CA618885E57009AC9E5 /* WalkingDistances.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkingDistances.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367D2CA918885E57009AC9E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		367D2CAB18885E57009AC9E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +71,13 @@
 		367D2CD018885E57009AC9E5 /* WalkingDistancesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkingDistancesTests-Info.plist"; sourceTree = "<group>"; };
 		367D2CD218885E57009AC9E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		367D2CD418885E57009AC9E5 /* WalkingDistancesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkingDistancesTests.m; sourceTree = "<group>"; };
+		367D2CDE18886417009AC9E5 /* betaMobileApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = betaMobileApp.html; sourceTree = "<group>"; };
+		367D2CE018886481009AC9E5 /* betaMobileApp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = betaMobileApp.js; sourceTree = "<group>"; };
+		367D2CE21888648E009AC9E5 /* betaMobileAppCampusData.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = betaMobileAppCampusData.js; sourceTree = "<group>"; };
+		367D2CE418886498009AC9E5 /* betaMobileAppHousingData.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = betaMobileAppHousingData.js; sourceTree = "<group>"; };
+		367D2CE6188864A5009AC9E5 /* betaMobileApp.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = betaMobileApp.css; sourceTree = "<group>"; };
+		367D2CE8188864AF009AC9E5 /* betaMobileAppMenu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = betaMobileAppMenu.js; sourceTree = "<group>"; };
+		36D146AC18AC31FC00E266F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D146AD18AC31FC00E266F6 /* SystemConfiguration.framework in Frameworks */,
 				367D2CAC18885E57009AC9E5 /* CoreGraphics.framework in Frameworks */,
 				367D2CAE18885E57009AC9E5 /* UIKit.framework in Frameworks */,
 				367D2CAA18885E57009AC9E5 /* Foundation.framework in Frameworks */,
@@ -101,6 +127,7 @@
 		367D2CA818885E57009AC9E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36D146AC18AC31FC00E266F6 /* SystemConfiguration.framework */,
 				367D2CA918885E57009AC9E5 /* Foundation.framework */,
 				367D2CAB18885E57009AC9E5 /* CoreGraphics.framework */,
 				367D2CAD18885E57009AC9E5 /* UIKit.framework */,
@@ -114,9 +141,21 @@
 			children = (
 				367D2CB818885E57009AC9E5 /* AppDelegate.h */,
 				367D2CB918885E57009AC9E5 /* AppDelegate.m */,
+				367D2CDE18886417009AC9E5 /* betaMobileApp.html */,
+				367D2CE018886481009AC9E5 /* betaMobileApp.js */,
+				367D2CE8188864AF009AC9E5 /* betaMobileAppMenu.js */,
+				367D2CE21888648E009AC9E5 /* betaMobileAppCampusData.js */,
+				367D2CE418886498009AC9E5 /* betaMobileAppHousingData.js */,
+				367D2CE6188864A5009AC9E5 /* betaMobileApp.css */,
+				363E606B18BD1EF500C60911 /* tabs2014.png */,
+				363E606D18BD238400C60911 /* facebook.jpg */,
+				363E606F18BD260000C60911 /* wellnesslogo.png */,
+				363E607318BD266600C60911 /* women logo.png */,
 				367D2CBB18885E57009AC9E5 /* Main.storyboard */,
 				367D2CBE18885E57009AC9E5 /* ViewController.h */,
 				367D2CBF18885E57009AC9E5 /* ViewController.m */,
+				363E607518BD9AE000C60911 /* Reachability.h */,
+				363E607618BD9AE000C60911 /* Reachability.m */,
 				367D2CC118885E57009AC9E5 /* Images.xcassets */,
 				367D2CB018885E57009AC9E5 /* Supporting Files */,
 			);
@@ -199,6 +238,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = WhirlingPanguins;
 				TargetAttributes = {
+					367D2CA518885E57009AC9E5 = {
+						DevelopmentTeam = 893XXC546B;
+					};
 					367D2CC618885E57009AC9E5 = {
 						TestTargetID = 367D2CA518885E57009AC9E5;
 					};
@@ -228,8 +270,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363E608018BDA9D800C60911 /* betaMobileApp.html in Resources */,
+				363E608118BDA9D800C60911 /* betaMobileAppHousingData.js in Resources */,
+				363E608218BDA9D800C60911 /* betaMobileAppMenu.js in Resources */,
+				363E608318BDA9D800C60911 /* betaMobileApp.css in Resources */,
+				363E607C18BDA50300C60911 /* betaMobileApp.js in Resources */,
+				363E607D18BDA50300C60911 /* betaMobileAppCampusData.js in Resources */,
+				363E606C18BD1EF500C60911 /* tabs2014.png in Resources */,
+				363E607018BD260000C60911 /* wellnesslogo.png in Resources */,
 				367D2CC218885E57009AC9E5 /* Images.xcassets in Resources */,
+				363E607418BD266600C60911 /* women logo.png in Resources */,
 				367D2CB418885E57009AC9E5 /* InfoPlist.strings in Resources */,
+				363E606E18BD238400C60911 /* facebook.jpg in Resources */,
 				367D2CBD18885E57009AC9E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +303,7 @@
 			files = (
 				367D2CC018885E57009AC9E5 /* ViewController.m in Sources */,
 				367D2CBA18885E57009AC9E5 /* AppDelegate.m in Sources */,
+				363E607718BD9AE000C60911 /* Reachability.m in Sources */,
 				367D2CB618885E57009AC9E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,10 +431,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WalkingDistances/WalkingDistances-Prefix.pch";
 				INFOPLIST_FILE = "WalkingDistances/WalkingDistances-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +448,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WalkingDistances/WalkingDistances-Prefix.pch";
 				INFOPLIST_FILE = "WalkingDistances/WalkingDistances-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +521,7 @@
 				367D2CDA18885E57009AC9E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		367D2CDB18885E57009AC9E5 /* Build configuration list for PBXNativeTarget "WalkingDistancesTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +530,7 @@
 				367D2CDD18885E57009AC9E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
