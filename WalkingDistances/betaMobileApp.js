@@ -15,8 +15,23 @@
     var originName = null;
     var destinationName = null;
     var clickCount = 0;
+    var histSwitch = false;
+    
+    var NE =  new google.maps.LatLng(43.883276, -111.738058);
+    var SW = new google.maps.LatLng(43.797349, -111.838308);
 
+    var bounds = new google.maps.LatLngBounds(SW,NE);
     //Creates a iframe that overides the normal alert so that it looks like a normal alert on the iPhone.
+
+function firstTime(){
+    if(localStorage["startUp"]){
+        
+    }
+    else{
+        localStorage["startUp"] = 1;
+        startUpInstructions();
+    }
+}
 
     function alert(message){
       var iframe = document.createElement("IFRAME");
@@ -34,11 +49,211 @@
         iframe.parentNode.removeChild(iframe);
     }
 
+
+function startUpInstructions(){
+    var body = document.getElementById('startInstructions');
+    body.classList.add('expand');
+    body.classList.add('spawnDown');
+    body.style.visibility = "visible";
+    body.innerHTML = "Welcome to the BYU-Idaho Walking Distances App for iPhone.<br><br><span id='fadeInText'>We want to show you the basics of this app, so you can get better familiar with its abilities.<br><br>Tap to Continue</span>";
+    var fadeText = document.getElementById('fadeInText');
+    fadeInText.classList.add('fadeOut')
+    setTimeout(function(){
+               var fadeText = document.getElementById('fadeInText');
+               fadeInText.classList.add('fadeIn');
+               },3000);
+    body.onclick = function(){
+        
+        this.innerHTML = "<span id='fadeInText'>At the top of the screen is where we will display all the information you will use to to determine how far buildings and apartments will be. The first row will display the locations in which you have selected, the second row will display the current selection's time and distance. The Third row will display the total distance selected untill cleared.<br><br>Tap to Continue</span>";
+        var fadeText = document.getElementById('fadeInText');
+        fadeText.classList.remove('fadeIn');
+        fadeInText.classList.add('fadeOut');
+        
+        setTimeout(function(){
+                   var fadeText = document.getElementById('fadeInText');
+                   fadeText.classList.remove('fadeOut');
+                   fadeInText.classList.add('fadeIn');
+                   },2500);
+        this.classList.add('expandMore');
+        
+        this.onclick = function(){
+            this.innerHTML = "<span id='fadeInText'>Here you'll find &#8594;</span>";
+            var fadeText = document.getElementById('fadeInText');
+            fadeText.classList.remove('fadeIn');
+            fadeInText.classList.add('fadeOut');
+            this.onclick = function(){}
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       fadeText.classList.remove('fadeOut');
+                       fadeInText.classList.add('fadeIn');
+                       
+                       },2500);
+            
+            this.classList.add('shrink');
+            this.classList.add('moveRight');
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       fadeText.classList.remove('fadeIn');
+                       fadeInText.classList.add('fadeOut2');
+                       },4000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       fadeText.innerHTML = "Campus Buildings &#8594;"
+                       fadeText.classList.remove('fadeOut2');
+                       fadeInText.classList.add('fadeIn');
+                       },6000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       var body = document.getElementById('startInstructions');
+                       fadeText.classList.remove('fadeIn');
+                       fadeInText.classList.add('fadeOut2');
+                       body.classList.remove('spawnDown');
+                       body.classList.add('shiftDown')
+                       },8000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       fadeText.innerHTML = "Women's Housing &#8594;"
+                       fadeText.classList.remove('fadeOut2');
+                       fadeInText.classList.add('fadeIn');
+                       },10000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       var body = document.getElementById('startInstructions');
+                       fadeText.classList.remove('fadeIn');
+                       fadeInText.classList.add('fadeOut2');
+                       body.classList.remove('shiftDown');
+                       body.classList.add('shiftDownMore')
+                       },12000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       fadeText.innerHTML = "Men's Housing &#8594;"
+                       fadeText.classList.remove('fadeOut2');
+                       fadeInText.classList.add('fadeIn');
+                       },14000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       var body = document.getElementById('startInstructions');
+                       fadeText.classList.remove('fadeIn');
+                       fadeInText.classList.add('fadeOut2');
+                       body.classList.remove('shiftDownMore');
+                       body.classList.add('shiftDown215');
+                       },16000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       fadeText.innerHTML = "Married Housing &#8594;"
+                       fadeText.classList.remove('fadeOut2');
+                       fadeInText.classList.add('fadeIn');
+                       },18000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       var body = document.getElementById('startInstructions');
+                       fadeText.classList.remove('fadeIn');
+                       fadeInText.classList.add('fadeOut2');
+                       body.classList.remove('shiftDown215');
+                       body.classList.add('shiftDown250');
+                       },20000);
+            
+            setTimeout(function(){
+                       var fadeText = document.getElementById('fadeInText');
+                       fadeText.innerHTML = "Custom Location &#8594;<br><br>In the custom location tab you can enter only rexburg address' to create a custom location.<br><br>Tap to Continue"
+                       fadeText.classList.remove('fadeOut2');
+                       fadeInText.classList.add('fadeIn');
+                       },22000);
+            
+            setTimeout(function(){
+                       var body = document.getElementById('startInstructions');
+                       body.classList.remove('moveRight');
+                       body.classList.add('moveLeft');
+                       body.classList.remove('shrink');
+                       body.classList.add('expandAgain');
+                       body.onclick = function(){
+                       var body = document.getElementById('startInstructions');
+                       body.classList.add('moveRight');
+                       body.classList.remove('moveLeft');
+                       body.classList.add('shrink');
+                       body.classList.remove('expandAgain');
+                       this.onclick = function(){}
+                       setTimeout(function(){
+                                  var fadeText = document.getElementById('fadeInText');
+                                  var body = document.getElementById('startInstructions');
+                                  fadeText.classList.remove('fadeIn');
+                                  fadeInText.classList.add('fadeOut2');
+                                  body.classList.remove('shiftDown250');
+                                  body.classList.add('shiftDown290');
+                                  },2000);
+                       
+                       setTimeout(function(){
+                                  var fadeText = document.getElementById('fadeInText');
+                                  fadeText.innerHTML = "Location History &#8594;"
+                                  fadeText.classList.remove('fadeOut2');
+                                  fadeInText.classList.add('fadeIn');
+                                  },4000);
+                       
+                       setTimeout(function(){
+                                  var fadeText = document.getElementById('fadeInText');
+                                  var body = document.getElementById('startInstructions');
+                                  fadeText.classList.remove('fadeIn');
+                                  fadeInText.classList.add('fadeOut2');
+                                  body.classList.remove('shiftDown290');
+                                  body.classList.add('shiftDown325');
+                                  },6000);
+                       
+                       setTimeout(function(){
+                                  var fadeText = document.getElementById('fadeInText');
+                                  fadeText.innerHTML = "Health Center Info. &#8594;"
+                                  fadeText.classList.remove('fadeOut2');
+                                  fadeInText.classList.add('fadeIn');
+                                  },8000);
+                       
+                       setTimeout(function(){
+                                  var body = document.getElementById('startInstructions');
+                                  body.classList.remove('shiftDown325');
+                                  body.classList.add('spawnDown');
+                                  body.classList.remove('moveRight');
+                                  body.classList.remove('shrink');
+                                  body.classList.add('expand');
+                                  var fadeText = document.getElementById('fadeInText');
+                                  fadeText.classList.remove('fadeIn');
+                                  fadeInText.classList.add('fadeOut2');
+                                  },10000);
+                       
+                       setTimeout(function(){
+                                  var fadeText = document.getElementById('fadeInText');
+                                  fadeText.innerHTML = "In order to get the distances between points all you have to do is choose two locations. Thank you, for using the Walking Distances App we hope you enjoy this tool.<br><br>Tap to close";
+                                  
+                                  
+                                  body.onclick = function(){
+                                  var en = document.getElementById('startInstructions');
+                                  var body = document.getElementById('bd');
+                                  body.removeChild(en);
+                                  }
+                                  fadeText.classList.remove('fadeOut2');
+                                  fadeInText.classList.add('fadeIn');
+                                  },12000);
+                       
+                       }
+                       },24000);
+            
+        }
+    }
+}
+
   //Builds map from google API
 function initialize() {
     var instructions = document.getElementById("instructions");
         instructions.style.backgroundColor = "white";
     document.getElementById('newsReel').contentWindow.location.reload()
+    document.getElementById('innerFrame').contentWindow.location.reload()
     
     //geocoder is the way to turn an address into coordinates that can be used to place custom markers.
       geocoder = new google.maps.Geocoder();
@@ -125,7 +340,16 @@ function initialize() {
           }
         }
         //populates the lists.
-        populateList();   
+        populateList();
+    
+    var healthCenter = new google.maps.LatLng(43.816871,  -111.779249);
+    marker = new google.maps.Marker({
+    map: map,
+    clickable: true,
+    icon: 'marker6.png',
+    title: "Health Center",
+    position: healthCenter
+    });
 }
     //creates the map with all the content.
     google.maps.event.addDomListener(window, 'load', initialize);
@@ -201,6 +425,18 @@ function callback(response, status) {
       
       var distances = response.rows[0].elements[0].distance.text
       //converts time to a number depending on the size of the time.
+      
+      if(time.length >= 15){
+          var getTime = time.slice(0,3);
+          
+              getTime *= 1;
+              getTime *= 24;
+          var hours = time.slice(9,11);
+          hours *=1;
+          getTime += hours;
+          time = getTime + " hours";
+          hrs += getTime;
+      }
       if (time.length == 7){
         var getTime = time.slice(0,3);
       }
@@ -215,8 +451,7 @@ function callback(response, status) {
         if (60 < totalTime){
           totalTime = totalTime % 60;
           hrs++
-        } 
-
+        }
       //converts distance to a number then to feet 
       var checkIfFeet = distances.slice(4,7);
       var distanceFeet = distances.slice(0,4);
@@ -238,14 +473,19 @@ function callback(response, status) {
         totalBox.innerHTML += total + 'ft';
         totalMiBox.innerHTML += totalMi + " mi";
       // converts the time to normal time.
-
+      
         if (0 < hrs){
-          totalTimeBox.innerHTML += hrs + " hr " + totalTimeMin + ' mins';
+          totalTimeBox.innerHTML += hrs + " hr " + totalTimeMin + ' m ';
         }
         else{
           totalTimeBox.innerHTML += totalTimeMin + ' mins';
         }
-        createHistory(time,distances,distanceFeet);
+        if(histSwitch == true){
+          histSwitch = false;
+        }
+        else{
+            createHistory(time,distances,distanceFeet);
+        }
       }
     }
 
@@ -268,7 +508,13 @@ function createTotalDistanceMi(getMiles,checkFeet){
 
 //adds the time of all the origins and destinations.
 function createTotalTime(getTime){
-         
+    if(getTime > 60){
+        
+        getTime *= 60;
+        alert(getTime);
+        getTime *= 60;
+    }
+    
   totalTimeMin += getTime;
   if (60 < totalTimeMin){
     totalTimeMin = totalTimeMin % 60;
@@ -315,11 +561,9 @@ function showInstruction(){
     var instructionBody = document.getElementById("instructionBody");
         instructions.classList.add("transitionBig");
         instructions.classList.remove("transitionSmall");
-    setTimeout(function(){
                var instructions = document.getElementById("instructions");
                instructions.innerHTML = "<br><span style='font-weight:Bold;'>Intructions:</span> <br> Use the slide menu's to select locations. Select two to get distances.<hr><span id='lightblue'>Campus</span> - Campus buildings at BYU-Idaho <br><br> <span id='pink'>Women</span> - This is the locations of women only housing in rexburg.<br><br><span id='blue'>Men</span> - This is the locations of men only housing in rexburg.<br><br> <span id='green'>Married</span> - This is the locations of married housing in rexburg.<br><br> <span id='orange'>Custom Address</span> - Enter your rexburg address,if not found in database.<br><br> <span id='grey'>History</span> - This is the history of your current session.";
-               
-               },600);
+
     setTimeout(function (){
                instructionBody.appendChild(closeButton);
                },800);
@@ -353,3 +597,7 @@ function getLocation(position){
     calculateDistances();
     calcRoute()
 }
+
+
+
+

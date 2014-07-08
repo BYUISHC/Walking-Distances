@@ -10,10 +10,12 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="betaMobileAppCampusData.js"></script>
     <script src="betaMobileAppHousingData.js"></script>
-    <script src="betaMobileAppMenu.js"></script>
     <script src="betaMobileApp.js"></script>
+    <script src="betaMobileAppMenu.js"></script>
+    
   </head>
-  <body onunload="stop()">
+  <body id="bd" onload="firstTime()">
+    <div id="startInstructions"></div>
     <div id="mainGUITrim">
       <div id="mainGUI">
         <div id="distanceBox">Distance</div>
@@ -90,18 +92,16 @@
       </div>
       <div id="tips" class="tabs">
           <div class="image" onclick="slideTabLeft(document.getElementById('tips'))"id="tipImage"></div>
-          <h3>Health Center Central</h3>
-          <iframe src="http://www.byui.edu/Documents/health-center/Mobilenews.html" id="newsReel" onload=";"></iframe>
+          <h3> Student Health Center</h3>
+          <iframe src="http://www.byui.edu/Documents/health-center/Mobilenews.html" id="newsReel"></iframe>
           <p class="close" onclick="slideTabRight(document.getElementById('tips'))">X</p>
           <a href="https://www.facebook.com/BYUIStudentHealth"><img id="facebookLink" src="facebook.jpg" /></a>
           <a href="http://healthcenterwellness.blogspot.com"><img id="wellnessLogo" src="wellnesslogo.png"/></a>
           <a href="http://shcwomenshealth.blogspot.com"><img id="womensLogo" src="women logo.png"/></a>
           <p id="healthLink" onclick="window.open('http://www.byui.edu/health-center/?cid=fli:172 ','_self ')"/>SHC</p>
-          <div id="information">
-              <p>Address: 100 Student Health Center, Rexburg, ID 83460<br>Phone: 208-496-9330<br>Fax: 208-496-9333</p>
-              <p id="walkToCenter" onclick="promptForLocation()">Walk To The Health Center</p>
-          </div>
-          <div class="list" id='tList' style="left:10px;top:210px;width:280px;height:175px;">
+          <p id="healthLink2" onclick="promptForLocation()"/>Find SHC</p>
+            <iframe src="https://www.byui.edu/Documents/health-center/healthcentercontact.html" id="innerFrame" scrolling='no'></iframe>
+          <div class="list" id='tList' style="left:10px;top:225px;width:280px;height:160px;">
               <p id="ServicesMenu">Health Center Services</p>
               <p onclick="window.open('http://www.byui.edu/health-center/medical-services/primary-care ','_self ')" class="servicesLinks">Primary Care</p>
               <p onclick="window.open('http://www.byui.edu/health-center/appointments ','_self ')" class="servicesLinks">Appointments</p>

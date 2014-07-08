@@ -1,4 +1,7 @@
 
+var checkLocation;
+var checkIfInBounds;
+
 //Slides a tab to the left.
 function slideTabLeft(object) {
   object.children[0].onclick = function() {slideTabRight(object);};
@@ -57,8 +60,6 @@ function createPlace(type,name,address,latitude,longitude,tab){
   this.longitude = longitude;
   this.tab = tab;
 }
-
-
 
 //appends the objects to the tabs, and setting there onclick functions.
 function createListItem(place){
@@ -122,21 +123,28 @@ function createListItem(place){
       }
 }
 
-//appends what the user has clicked in the history tab
+//appends what the user has clicked into the history tab, and creates a button so they can recall the distance and route.
 function createHistory(time,distances,feet){
     var historyList = document.getElementById('hList');
     var historyItem = document.createElement('p');
-
+    var newOrigin = origin;
+    var newDestination = destination;
       if (historyList.childNodes.length == 10){
         historyList.removeChild(historyList.firstChild);
       }
         historyItem.innerHTML = "From<span> " + originName + "</span><br>To <span>" + destinationName + "</span> Time: <span>" + time + " </span>Distance: <span>" + distances + " , " + feet + "ft</span>";
 
+        historyItem.onclick = function (){
+        	histSwitch = true;
+        	origin = newOrigin;
+        	destination = newDestination;
+        	slideTabRight(document.getElementById("history"));
+            calculateDistances();
+            calcRoute()
+          }
+
          hList.appendChild(historyItem);
 } 
-
-
-
 //clears the history tab
 function clearHistory(){
   var historyList = document.getElementById('hList');
@@ -151,7 +159,8 @@ function checkLine(){
   var getName = document.getElementById('customName').value;
         document.getElementById('customName').value = '';
         document.getElementById('customAddress').value = '';
-
+    getLatLng(getCords);
+    checkNum(getCords);
     if (getCords.indexOf("<") != -1 || getCords.indexOf("script") != -1){
       alert("Invalid address, Please enter a valid address.");
     }
@@ -159,16 +168,69 @@ function checkLine(){
       alert("Please enter in a proper name.");
     }
     else{
-      createLatLang(getCords,getName);
+        setTimeout(function(){
+          if(checkIfInBounds == true){
+            createLatLang(getCords,getName);
+          }
+          else{
+            alert("Invalid address, Please enter a valid address.");
+          }
+        },2000)
+        
     }
 }
+
+function checkNum(address){
+	var numCount = 0;
+
+	for(var i =0;i < address.length;i++){
+		if(isNaN(address[0])){
+
+		}
+		else{
+			numCount++;
+		}
+	}
+
+	if(numCount = 0){
+		checkIfInBounds = false;
+	}
+	
+}
+
+function getLatLng(address){
+    if(address.indexOf("rexberg") == -1){
+      address += "Rexburg Idaho 83440";
+    }
+    geocoder.geocode( { 'address': address}, function(results, status) {
+         if (status == google.maps.GeocoderStatus.OK) {
+            checkLocation = results[0].geometry.location;
+            store(checkLocation);
+         }
+         else {
+             alert('Geocode was not successful for the following reason: ' + status);
+         }
+     });
+}
+
+function store(location){
+  var  lat = location.lat();
+  var  lng = location.lng();
+  newLocation = new google.maps.LatLng(lat,lng);
+  checkIfInBounds = bounds.contains(newLocation);
+}
+
+
+
+
 //this is using the geocoding API to convert an address to latitude and longitude
 function createLatLang(Addresses,Names){
   var address = Addresses + ",Rexburg,Idaho"
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
         createCustomObject(results,Names,Addresses);
-    } else {
+    } 
+    else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
@@ -194,8 +256,7 @@ function createSaveData(Data){
 
   for(var i = 0;i < savedCustomItems.length;i++){
     localStorage['customData'] += "," + savedCustomItems[i];
-  }
-
+  } 
   alert("saved");
 }
 
@@ -234,12 +295,13 @@ function createCustomListItem(place){
   var itemClear = document.createElement("div");
       itemClear.id = place[0];
       itemClear.innerHTML = "X";
-      itemClear.style.width = "10px";
+      itemClear.style.width = "12px";
       itemClear.style.position = "relative";
-      itemClear.style.left = "190px";
-      itemClear.style.top = "-27px";
+      itemClear.style.left = "180px";
+      itemClear.style.top = "-45px";
       itemClear.style.backgroundColor = "#F19012";
-      itemClear.style.padding ="5px";
+      itemClear.style.padding ="10px";
+      //itemClear.style.height = "50px";
       itemClear.style.fontFamily = "Verdana";
       itemClear.style.fontWeight = "bold";
       itemClear.style.color = "White";

@@ -17,8 +17,6 @@
 @implementation ViewController
 
 // create a string with link to page.
-NSString *fullURL = @"file:///WalkingDistances/WalkingDistances/betaMobileApp.html";
-
 
 - (void)viewDidLoad
 {
@@ -26,6 +24,7 @@ NSString *fullURL = @"file:///WalkingDistances/WalkingDistances/betaMobileApp.ht
      _webView.scrollView.scrollEnabled = NO;
     
    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"betaMobileApp" ofType:@"html"]isDirectory:NO]]];
+    
     //starts a timer.
     NSRunLoop* runLoop = [NSRunLoop currentRunLoop];
     
@@ -37,6 +36,8 @@ NSString *fullURL = @"file:///WalkingDistances/WalkingDistances/betaMobileApp.ht
     
     //message to start timer.
     [runLoop addTimer:checkURL forMode:NSDefaultRunLoopMode];
+    
+    
     
     //uses reachablility class to check if interent is connected.
     //tries to connect to google.com
@@ -86,7 +87,9 @@ NSInteger count = 0;
     }
 }
 
-
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+}
 
 
 @end

@@ -32,7 +32,10 @@
 		367D2CCB18885E57009AC9E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367D2CAD18885E57009AC9E5 /* UIKit.framework */; };
 		367D2CD318885E57009AC9E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 367D2CD118885E57009AC9E5 /* InfoPlist.strings */; };
 		367D2CD518885E57009AC9E5 /* WalkingDistancesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 367D2CD418885E57009AC9E5 /* WalkingDistancesTests.m */; };
+		36B559A918DA392B0083C5AB /* tabs2014new.png in Resources */ = {isa = PBXBuildFile; fileRef = 36B559A818DA392B0083C5AB /* tabs2014new.png */; };
+		36B559AB18DA51E70083C5AB /* default.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 36B559AA18DA51E70083C5AB /* default.gpx */; };
 		36D146AD18AC31FC00E266F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D146AC18AC31FC00E266F6 /* SystemConfiguration.framework */; };
+		36DDF99418C66DEE0090652C /* marker6.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DDF99318C66DEE0090652C /* marker6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +80,10 @@
 		367D2CE418886498009AC9E5 /* betaMobileAppHousingData.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = betaMobileAppHousingData.js; sourceTree = "<group>"; };
 		367D2CE6188864A5009AC9E5 /* betaMobileApp.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = betaMobileApp.css; sourceTree = "<group>"; };
 		367D2CE8188864AF009AC9E5 /* betaMobileAppMenu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = betaMobileAppMenu.js; sourceTree = "<group>"; };
+		36B559A818DA392B0083C5AB /* tabs2014new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabs2014new.png; sourceTree = "<group>"; };
+		36B559AA18DA51E70083C5AB /* default.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = default.gpx; sourceTree = "<group>"; };
 		36D146AC18AC31FC00E266F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		36DDF99318C66DEE0090652C /* marker6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		367D2C9D18885E57009AC9E5 = {
 			isa = PBXGroup;
 			children = (
+				36B559AA18DA51E70083C5AB /* default.gpx */,
 				367D2CAF18885E57009AC9E5 /* WalkingDistances */,
 				367D2CCE18885E57009AC9E5 /* WalkingDistancesTests */,
 				367D2CA818885E57009AC9E5 /* Frameworks */,
@@ -148,8 +155,10 @@
 				367D2CE418886498009AC9E5 /* betaMobileAppHousingData.js */,
 				367D2CE6188864A5009AC9E5 /* betaMobileApp.css */,
 				363E606B18BD1EF500C60911 /* tabs2014.png */,
+				36B559A818DA392B0083C5AB /* tabs2014new.png */,
 				363E606D18BD238400C60911 /* facebook.jpg */,
 				363E606F18BD260000C60911 /* wellnesslogo.png */,
+				36DDF99318C66DEE0090652C /* marker6.png */,
 				363E607318BD266600C60911 /* women logo.png */,
 				367D2CBB18885E57009AC9E5 /* Main.storyboard */,
 				367D2CBE18885E57009AC9E5 /* ViewController.h */,
@@ -235,7 +244,7 @@
 		367D2C9E18885E57009AC9E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = WhirlingPanguins;
 				TargetAttributes = {
 					367D2CA518885E57009AC9E5 = {
@@ -276,13 +285,16 @@
 				363E608318BDA9D800C60911 /* betaMobileApp.css in Resources */,
 				363E607C18BDA50300C60911 /* betaMobileApp.js in Resources */,
 				363E607D18BDA50300C60911 /* betaMobileAppCampusData.js in Resources */,
+				36DDF99418C66DEE0090652C /* marker6.png in Resources */,
 				363E606C18BD1EF500C60911 /* tabs2014.png in Resources */,
 				363E607018BD260000C60911 /* wellnesslogo.png in Resources */,
 				367D2CC218885E57009AC9E5 /* Images.xcassets in Resources */,
 				363E607418BD266600C60911 /* women logo.png in Resources */,
 				367D2CB418885E57009AC9E5 /* InfoPlist.strings in Resources */,
 				363E606E18BD238400C60911 /* facebook.jpg in Resources */,
+				36B559AB18DA51E70083C5AB /* default.gpx in Resources */,
 				367D2CBD18885E57009AC9E5 /* Main.storyboard in Resources */,
+				36B559A918DA392B0083C5AB /* tabs2014new.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +370,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -371,7 +382,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -397,7 +408,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -410,7 +420,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jakob Hartman (893XXC546B)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -463,7 +473,6 @@
 		367D2CDC18885E57009AC9E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WalkingDistances.app/WalkingDistances";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -486,7 +495,6 @@
 		367D2CDD18885E57009AC9E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WalkingDistances.app/WalkingDistances";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

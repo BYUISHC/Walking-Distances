@@ -10,11 +10,8 @@
 #import "Reachability.h"
 
 
-@interface ViewController : UIViewController{
-    //creates a Reachblity object.
+@interface ViewController :  UIViewController <UIWebViewDelegate>
+{
     Reachability *internetReachable;
 }
-
-
-
 @end
